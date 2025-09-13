@@ -1,0 +1,1765 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Auto-generated business docs for TIBCO BW services">
+      
+      
+      
+        <link rel="canonical" href="https://jonathan-aulson.github.io/Concentra-Tibco-Context/moviesearch.module/Family_moviesearch.module/">
+      
+      
+        <link rel="prev" href="../../moviecatalogsearch.module/moviecatalogsearch.module.SortSingleMovie/">
+      
+      
+        <link rel="next" href="../moviesearch.module.Process/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>Family moviesearch.module — domain view - Concentra BW Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#family-moviesearchmodule-domain-view" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Concentra BW Docs" class="md-header__button md-logo" aria-label="Concentra BW Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Concentra BW Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Family moviesearch.module — domain view
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Concentra BW Docs" class="md-nav__button md-logo" aria-label="Concentra BW Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Concentra BW Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📂 Repository Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../REPO_OVERVIEW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repository Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TIBCO%20BW%20Custom%20DataSource%20Factory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TIBCO BW Custom DataSource Factory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creditapp-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📘 Credit Application Service Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creditcheck-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📘 Credit Check Backend Service Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-app-props/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📘 Custom App Properties Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-jdbc-driver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📘 Custom JDBC Driver Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../execution-event-subscriber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📘 Execution Event Subscriber Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experian-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📘 Experian Demo Service Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logging-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📘 Logging Service Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moviecatalog-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🎬 Movie Catalog Search Service Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moviesearch-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🎬 Movie Search Service Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repo-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📂 Repository Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Com.tibco.bw.custom.app.props
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Com.tibco.bw.custom.app.props
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../com.tibco.bw.custom.app.props/Family_com.tibco.bw.custom.app.props/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Family com.tibco.bw.custom.app.props — domain view
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../com.tibco.bw.custom.app.props/com.tibco.bw.custom.app.props.CustomAppProps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    com.tibco.bw.custom.app.props.CustomAppProps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Creditapp.module
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Creditapp.module
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creditapp.module/Family_creditapp.module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Family creditapp.module — domain view
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creditapp.module/creditapp.module.EquifaxScore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    creditapp.module.EquifaxScore
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creditapp.module/creditapp.module.ExperianScore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    creditapp.module.ExperianScore
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creditapp.module/creditapp.module.MainProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    creditapp.module.MainProcess
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Creditcheckservice
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Creditcheckservice
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creditcheckservice/Family_creditcheckservice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Family creditcheckservice — domain view
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creditcheckservice/creditcheckservice.LookupDatabase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    creditcheckservice.LookupDatabase
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creditcheckservice/creditcheckservice.Process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    creditcheckservice.Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Custom.jdbc.driver
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Custom.jdbc.driver
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom.jdbc.driver/Family_custom.jdbc.driver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Family custom.jdbc.driver — domain view
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Experianservice.module
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Experianservice.module
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experianservice.module/Family_experianservice.module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Family experianservice.module — domain view
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experianservice.module/experianservice.module.Process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    experianservice.module.Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Loggingservice
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            Loggingservice
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loggingservice/Family_loggingservice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Family loggingservice — domain view
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loggingservice/loggingservice.LogProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    loggingservice.LogProcess
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Moviecatalogsearch.module
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
+            <span class="md-nav__icon md-icon"></span>
+            Moviecatalogsearch.module
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moviecatalogsearch.module/Family_moviecatalogsearch.module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Family moviecatalogsearch.module — domain view
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moviecatalogsearch.module/moviecatalogsearch.module.GetRatings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    moviecatalogsearch.module.GetRatings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moviecatalogsearch.module/moviecatalogsearch.module.Process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    moviecatalogsearch.module.Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moviecatalogsearch.module/moviecatalogsearch.module.SearchMovies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    moviecatalogsearch.module.SearchMovies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moviecatalogsearch.module/moviecatalogsearch.module.SortMovieSingle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    moviecatalogsearch.module.SortMovieSingle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moviecatalogsearch.module/moviecatalogsearch.module.SortMovies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    moviecatalogsearch.module.SortMovies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../moviecatalogsearch.module/moviecatalogsearch.module.SortSingleMovie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    moviecatalogsearch.module.SortSingleMovie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Moviesearch.module
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_21">
+            <span class="md-nav__icon md-icon"></span>
+            Moviesearch.module
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Family moviesearch.module — domain view
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Family moviesearch.module — domain view
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposed-endpoints-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposed Endpoints (detected)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confidence-evidence-rollup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confidence &amp; Evidence Rollup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../moviesearch.module.Process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    moviesearch.module.Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../moviesearch.module.SearchOmdb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    moviesearch.module.SearchOmdb
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tibco.bw.sample.application.execution.event
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
+            <span class="md-nav__icon md-icon"></span>
+            Tibco.bw.sample.application.execution.event
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tibco.bw.sample.application.execution.event/Family_tibco.bw.sample.application.execution.event/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Family tibco.bw.sample.application.execution.event — domain view
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tibco.bw.sample.application.execution.event/tibco.bw.sample.application.execution.event.subscriber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tibco.bw.sample.application.execution.event.subscriber
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Members
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposed-endpoints-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposed Endpoints (detected)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confidence-evidence-rollup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confidence &amp; Evidence Rollup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="family-moviesearchmodule-domain-view">Family moviesearch.module — domain view<a class="headerlink" href="#family-moviesearchmodule-domain-view" title="Permanent link">&para;</a></h1>
+<!-- CONFIDENCE_INLINE -->
+<blockquote>
+<p><strong>Confidence Score:</strong> 0.81 — <em>(see scoring table at bottom for details)</em></p>
+</blockquote>
+<h2 id="members">Members<a class="headerlink" href="#members" title="Permanent link">&para;</a></h2>
+<ul>
+<li>moviesearch.module.Process</li>
+<li>moviesearch.module.SearchOmdb</li>
+</ul>
+<h2 id="exposed-endpoints-detected">Exposed Endpoints (detected)<a class="headerlink" href="#exposed-endpoints-detected" title="Permanent link">&para;</a></h2>
+<ul>
+<li>moviesearch.module.Process: GET Unknown</li>
+<li>moviesearch.module.Process: Unknown //0/@process</li>
+<li>moviesearch.module.Process: Unknown //0/@process/@activity/@activity/@activities.0</li>
+<li>moviesearch.module.Process: Unknown //0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity</li>
+<li>moviesearch.module.Process: Unknown //0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.0</li>
+<li>moviesearch.module.Process: Unknown //0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.2</li>
+<li>moviesearch.module.Process: Unknown //0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3</li>
+<li>moviesearch.module.Process: Unknown /movies</li>
+<li>moviesearch.module.SearchOmdb: GET Unknown</li>
+<li>moviesearch.module.SearchOmdb: Unknown /</li>
+<li>moviesearch.module.SearchOmdb: Unknown //0/@process/@activity</li>
+<li>moviesearch.module.SearchOmdb: Unknown //0/@process/@activity/@activity</li>
+<li>moviesearch.module.SearchOmdb: Unknown //0/@process/@activity/@activity/@activities.0</li>
+<li>moviesearch.module.SearchOmdb: Unknown //0/@process/@activity/@activity/@activities.1</li>
+<li>moviesearch.module.SearchOmdb: Unknown //0/@process/@activity/@activity/@activities.2</li>
+<li>moviesearch.module.SearchOmdb: Unknown {http://tns.tibco.com/bw/json/1563800063700}OMDBSearchElement</li>
+</ul>
+<p><em>This is an automated domain-level synthesis; verify endpoints and flows where needed.</em></p>
+<!-- CONFIDENCE_ROLLUP_START -->
+<h2 id="confidence-evidence-rollup">Confidence &amp; Evidence Rollup<a class="headerlink" href="#confidence-evidence-rollup" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">How to read these scores</p>
+<ul>
+<li><strong>parsed</strong> — base signal that the process was parsed at all (typically 0.5 when activities were found).</li>
+<li><strong>known_types_coverage</strong> — fraction of activities recognized as known BW types (higher is better; low values mean many unknown/opaque steps).</li>
+<li><strong>transition_integrity</strong> — 1.0 if all transitions link valid activities; lower means broken/missing links.</li>
+<li><strong>role_coverage</strong> — evidence of key roles detected (interface.receive / invoke.process / data.jdbc / messaging.jms, etc.).</li>
+<li><strong>evidence_strength</strong> — proportion of claims backed by concrete evidence (e.g., detected endpoints, JDBC targets).</li>
+<li><strong>inferred_fraction</strong> — portion of the explanation based on hypotheses (higher = more guesswork).</li>
+</ul>
+<p>Examples:
+- High <strong>known_types_coverage</strong> (≥ 0.7): process uses well-identified palette activities (HTTP/REST/JDBC/JMS/etc.).
+- Low <strong>transition_integrity</strong> (&lt; 1.0): transitions reference non-existent steps (XML issues or partial parse).
+- Low <strong>evidence_strength</strong> (≈ 0.0): few/no concrete endpoints, datastore names, or invocation targets detected.
+- Higher <strong>inferred_fraction</strong> (≥ 0.5): explanation relies on educated guesses (scant evidence in source).
+- Overall score is the average of component scores, penalized by any low scores.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th style="text-align: right;">Score</th>
+<th style="text-align: right;">parsed</th>
+<th style="text-align: right;">known_types</th>
+<th style="text-align: right;">transition_integrity</th>
+<th style="text-align: right;">role_coverage</th>
+<th style="text-align: right;">evidence_strength</th>
+<th style="text-align: right;">inferred_fraction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>moviesearch.module.Process.md</td>
+<td style="text-align: right;">0.81</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr>
+<td>moviesearch.module.SearchOmdb.md</td>
+<td style="text-align: right;">0.81</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall score (this document set):</strong> 0.81</p>
+<!-- CONFIDENCE_ROLLUP_END -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
